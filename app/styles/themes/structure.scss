@@ -1,0 +1,86 @@
+#jsConsole{
+  display: none;
+}
+
+html {
+  line-height: 0; 
+}
+
+[class^="col-"] {
+  min-height: 0;
+}
+
+
+.panel-header{
+  
+  > .block {
+
+    width: 100%;
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    border-bottom: 3px solid #1B7CA6;
+
+    background: #f5f5f5;
+    
+
+  }
+}
+
+.conteudo{
+  display: flex;
+  width: 100%;
+}
+
+.panel-nav{
+  flex: 0 0 $nav-width;
+  margin-top: $header-height-space;
+  background: #eee;
+
+  > .block {
+    width: $nav-width;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    
+    border-bottom: 3px solid #1B7CA6;
+    background: #ddd;
+
+  }
+}
+
+.panel-article{
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-top: $header-height-space;
+  background: #ccc;
+
+  > .panel-block-iframe {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: green;
+    
+    > .block {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: orange;
+      overflow: scroll;
+
+      > iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+      }
+    }
+
+  }
+}
