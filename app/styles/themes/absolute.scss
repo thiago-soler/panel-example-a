@@ -5,6 +5,8 @@ $nav-width: 300px;
 
 $nav-collapse-width: 50px;
 
+$color-blue-a: #1B7CA6;
+
 @mixin absolute-blocks ($width: $percent-default, $height: $percent-default, $top: $unit-default, $left: $unit-default, $right: $unit-default) {
     
     @if $width == null {
@@ -55,7 +57,7 @@ html {
     @include absolute-blocks(null, $header-height);
 
     background: #eee;
-    border-bottom: 3px solid #1B7CA6;
+    border-bottom: 3px solid $color-blue-a;
 
     -webkit-box-shadow: 0px -2px 20px 1px rgba(0,0,0,0.62);
     -moz-box-shadow: 0px -2px 20px 1px rgba(0,0,0,0.62);
@@ -122,6 +124,7 @@ html {
       
       .panel-nav {
         width: $nav-collapse-width;
+        background: $color-blue-a;
       }
 
       .panel-article {
