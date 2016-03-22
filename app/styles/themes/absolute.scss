@@ -25,6 +25,10 @@ $color-blue-a: #1B7CA6;
       $left: $unit-default
     }
 
+    @if $right == null {
+      $right: $unit-default
+    }
+
     width: $width;
     height: $height;
     position: absolute;
@@ -97,6 +101,16 @@ html {
 
     z-index: 1;
 
+    .panel-iframe {
+
+      @include absolute-blocks(null, null, 0, 0);
+
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+
+    }
+
   }
 
 }
@@ -123,8 +137,9 @@ html {
     .panel-section {
       
       .panel-nav {
+        
         width: $nav-collapse-width;
-        background: $color-blue-a;
+
       }
 
       .panel-article {
@@ -133,7 +148,8 @@ html {
           calc(#{$percent-default} - #{$nav-collapse-width}),
           calc(#{$percent-default} - #{$header-height}),
           $header-height,
-          auto
+          auto,
+          0
         );
 
       }
