@@ -7,7 +7,7 @@ $header-height: 80px;
 $header-height-space: $header-height;
 
 $nav-width: 300px;
-$nav-collapse-width: 50px;
+$nav-collapse-width: 40px;
 
 $nav-height: calc(#{$percent-default} - #{$header-height});
 
@@ -15,6 +15,9 @@ $article-width: calc(#{$percent-default} - #{$nav-width});
 $article-height: calc(#{$percent-default} - #{$header-height});
 
 $color-blue-a: #1B7CA6;
+
+$color-gray-a: #ddd;
+$color-gray-b: #555;
 
 // ############################################### Customize views #####################################################
 
