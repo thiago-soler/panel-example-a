@@ -1,0 +1,14 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+
+// Variaveis para montagem de styles
+@import "variables/_common.scss";
+
+// Mixins para montagem de styles
+@import "mixins/_blocks.scss";
+
+// Themes para montagem dos layouts
+@import "themes/_structure-absolute.scss";

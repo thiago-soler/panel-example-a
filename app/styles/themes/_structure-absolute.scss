@@ -1,0 +1,80 @@
+#jsConsole{
+  display: none;
+}
+
+html {
+  line-height: 0; 
+}
+
+[class^="col-"] {
+  min-height: 0;
+}
+
+.panel-section {
+  
+  @include absolute-blocks(null);
+  
+  background: #eee;
+
+  .panel-header {
+
+    @include absolute-blocks(null, $header-height);
+
+    background: #eee;
+    border-bottom: 3px solid $color-blue-a;
+
+    -webkit-box-shadow: 0px -2px 20px 1px rgba(0,0,0,0.62);
+    -moz-box-shadow: 0px -2px 20px 1px rgba(0,0,0,0.62);
+    box-shadow: 0px -2px 20px 1px rgba(0,0,0,0.62);
+
+    z-index: 3;
+
+  }
+
+  .panel-nav {
+    
+    @include absolute-blocks(
+      $nav-width,
+      $nav-height,
+      $header-height-space
+    );
+    
+    border-right: 1px solid #ddd;
+    background: #f5f5f5;
+
+    z-index: 2;
+
+  }
+
+  .panel-article {
+
+    @include absolute-blocks(
+      $article-width,
+      $article-height,
+      $header-height-space,
+      auto
+    );
+
+    background: #f5f5f5;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    z-index: 1;
+
+    .panel-iframe {
+
+      @include absolute-blocks(null, null, 0, 0);
+
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+
+    }
+
+  }
+
+}
+
+// Media queries
+@import "media_queries/_structure-absolute-view-1.scss";
+@import "media_queries/_structure-absolute-view-2.scss";

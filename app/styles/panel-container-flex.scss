@@ -4,6 +4,5 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
 
-@import "variables/common.scss";
-// @import "themes/structure.scss";
-@import "themes/absolute.scss";
+@import "variables/_common.scss";
+@import "themes/_structure-flex.scss";

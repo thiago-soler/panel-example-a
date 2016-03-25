@@ -1,0 +1,24 @@
+@media screen and (min-width: $view-1-min-width) and (max-width: $view-1-max-width) {
+    
+    .panel-section {
+      
+      .panel-nav {
+        
+        width: $nav-collapse-width;
+
+      }
+
+      .panel-article {
+
+        @include absolute-blocks(
+          $article-width-view-1,
+          $article-height-view-1,
+          $header-height-space-view-1,
+          auto,
+          0
+        );
+
+      }
+
+    }
+}

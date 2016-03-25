@@ -1,0 +1,16 @@
+@media screen and (max-width: $view-2-max-width) {
+    
+    .panel-section {
+      
+      .panel-nav {
+        display: none;
+      }
+
+      .panel-article {
+        width: $percent-default;
+        left: 0;
+        right: auto;
+      }
+
+    }
+}

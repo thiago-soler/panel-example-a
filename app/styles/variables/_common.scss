@@ -1,0 +1,31 @@
+// Defaults
+$percent-default: 100%;
+$unit-default: 0;
+
+$header-height: 80px;
+
+$header-height-space: $header-height;
+
+$nav-width: 300px;
+$nav-collapse-width: 50px;
+
+$nav-height: calc(#{$percent-default} - #{$header-height});
+
+$article-width: calc(#{$percent-default} - #{$nav-width});
+$article-height: calc(#{$percent-default} - #{$header-height});
+
+$color-blue-a: #1B7CA6;
+
+// ############################################### Customize views #####################################################
+
+// View 1
+$header-height-space-view-1: $header-height;
+
+$article-width-view-1: calc(#{$percent-default} - #{$nav-collapse-width});
+$article-height-view-1: calc(#{$percent-default} - #{$header-height});
+
+$view-1-max-width: 900px;
+$view-1-min-width: 560px;
+
+// View 2
+$view-2-max-width: $view-1-min-width;
