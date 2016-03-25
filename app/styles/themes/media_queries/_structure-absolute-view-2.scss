@@ -1,13 +1,19 @@
 @media screen and (max-width: $view-2-max-width) {
     
     .panel-section {
+
+      .panel-header {
+        height: $header-height-view-2;
+      }
       
       .panel-nav {
         display: none;
       }
 
       .panel-article {
-        width: $percent-default;
+        width: $article-width-view-2;
+        height: $article-height-view-2;
+        top: $header-height-space-view-2;
         left: 0;
         right: auto;
       }

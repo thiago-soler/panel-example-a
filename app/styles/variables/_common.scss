@@ -19,13 +19,19 @@ $color-blue-a: #1B7CA6;
 // ############################################### Customize views #####################################################
 
 // View 1
+$view-1-max-width: 960px;
+$view-1-min-width: 560px;
+
 $header-height-space-view-1: $header-height;
 
 $article-width-view-1: calc(#{$percent-default} - #{$nav-collapse-width});
 $article-height-view-1: calc(#{$percent-default} - #{$header-height});
 
-$view-1-max-width: 900px;
-$view-1-min-width: 560px;
-
 // View 2
 $view-2-max-width: $view-1-min-width;
+
+$header-height-view-2: 50px;
+$header-height-space-view-2: $header-height-view-2;
+
+$article-width-view-2: $percent-default;
+$article-height-view-2: calc(#{$percent-default} - #{$header-height-view-2});
