@@ -1,245 +1,286 @@
-$nav-theme-2-color-a: $color-gray-a;
-$nav-theme-2-color-b: $nav-color-hover-a;
-$nav-theme-2-color-c: $color-blue-a;
-$nav-theme-2-color-d: $color-gray-b;
-$nav-theme-2-color-e: $color-gray-c;
-$nav-theme-2-color-f: $color-gray-f;
+$nav-theme-1-color-gray-a: $color-gray-a;
+$nav-theme-1-color-gray-b: $color-gray-b;
+$nav-theme-1-color-gray-c: $color-gray-c;
 
-$background-color-scheme-a: #fff;
-$background-color-scheme-b: $nav-theme-2-color-e;
+$nav-theme-1-color-blue-a: $color-blue-a;
+$nav-theme-1-color-blue-b: $color-blue-b;
+
+$nav-theme-1-color-scheme-blue-1: $color-scheme-blue-1;
+$nav-theme-1-color-scheme-blue-2: $color-scheme-blue-2;
+
+$nav-theme-1-color-scheme-gray-1: $color-scheme-gray-1;
+$nav-theme-1-color-scheme-gray-2: $color-scheme-gray-2;
+
+$nav-theme-1-color-scheme-orange-1: $color-scheme-orange-1;
 
 .nav-theme-2{
 
-  .main-navigation {
+  @include flex-default-container();
+  @include reset-style-list();
 
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    list-style-type: none;
+  flex-wrap: wrap;
+
   
-    >.item {
+  // Define os blocos principais de divisao do menu
+  .item-1 {
 
-      display: flex;
-      flex: 0 0 100%;
-      flex-wrap: wrap;
+    @include flex-default-container();
+    flex-wrap: wrap;
+
+    .block-1 {
+
+      @include flex-default-container();
+
+    }
+    
+    // Cria os estilos referente ao menu
+    .link-1 {
+      
+      @include flex-default-container();
+
+      align-items: center;
+      padding: 8px 10px;
+
+      border-top: 1px solid #f5f5f5;
+      border-bottom: 1px solid #f5f5f5;
+
+      
       font-size: 0.8rem;
+      text-decoration: none;
 
       transition: all 0.15s ease-out;
 
-      >:not(.sub-item).block{
+      .bullet-1 {
 
         display: flex;
-        flex: 0 0 100%;
-
-        .link {
-
-          display: flex;
-          flex: 0 0 100%;
-          align-items: center;
-          padding: 8px 14px;
-          
-          text-decoration: none;
-
-          color: $nav-theme-2-color-d;
-
-          .bullet{
-            
-            display: flex;
-            height: 22px;
-            flex: 0 0 22px;
-            word-break: keep-all;
-            align-items: center;
-            justify-content: center;
-            
-            font-size: 0.7rem;
-
-            border-radius: 11px;
-
-            background-color: $background-color-scheme-b;
-
-            transition: all 0.5s ease-out;
-
-            .icon{
-            
-              align-self: center;
-              color: #fff;
-
-            }
-
-          }
-
-          .info{
-            flex-grow: 1;
-            align-self: center;
-            margin: 0 5px;
-          }
-
-          [class*=chevron] {
-            color: $background-color-scheme-b;
-          }
-
-        }
-
-
-      }
-
-      .sub-item {
-
-        display: none;
-
-      }
-      
-      &:not(.selected):not(.active):hover {
-
-        background-color: $nav-theme-2-color-b;
-
-        .bullet {
-
-          background-color: $nav-theme-2-color-c;
-
-        }
-
-      }
-      
-      &.selected{
-
-        background-color: $background-color-scheme-a;
-        border-top: 1px solid $nav-theme-2-color-a;
-        border-bottom: 1px solid $nav-theme-2-color-a;
+        height: 22px;
+        flex: 0 0 22px;
+        word-break: keep-all;
+        align-items: center;
+        justify-content: center;
         
-        .block {
-          
-          &:after {
-            flex: 0 0 1px;
-            content: '';
-            width: 1px;
-            background-color: $background-color-scheme-a;
-          }
+        margin-right: 5px;
+        
+        font-size: 0.7rem;
 
-          .link {
-            
-            cursor: default;
+        border-radius: 11px;
 
-            .bullet{
-              
-              background: $color-orange-a;
+        background-color: $nav-theme-1-color-scheme-gray-2;
 
-            }
+        transition: all 0.5s ease-out;
 
-            .info{
-              
-              color: $color-orange-a;
+        .icon-1 {
 
-            }
+          color: $nav-theme-1-color-scheme-gray-1;
+          align-self: center;
+          color: #fff;
 
-          }
+          transition: all 0.5s ease-out;
 
         }
 
       }
 
-      &.active {
+      .info-1 {
+          
+        color: $nav-theme-1-color-scheme-gray-1;
+        flex-grow: 1;
 
-        .block{
+      }
 
-          .link {
-            
-            cursor: default;
+      .icon-list-1 {
+        
+        color: $nav-theme-1-color-scheme-gray-2;
 
-            .bullet {
-              
-              background-color: transparent;
+        transition: all 0.5s ease-out;
 
-              .icon {
-                
-                font-size: 1.1rem;
-                color: $nav-theme-2-color-f;
+      }
 
-              }
+    }
 
-            }
+    &.active {
+      
+      .link-1{
+        
+        background-color: #FDF1DB;
 
-            .info {
-              
-              color: $nav-theme-2-color-f;
+        cursor: default;
 
-            }
+        .bullet-1 {
 
-            [class*=chevron] {
-                
-              transform: rotate(90deg);
+          background-color: transparent;
 
-              color: $color-orange-a;
+          .icon-1 {
 
-            }
+            font-size: 1.1rem;
+            color: $nav-theme-1-color-scheme-gray-1;
 
           }
 
         }
 
-        .sub-item {
+        .info-1 {
 
-          display: block;
-          
+          color: $nav-theme-1-color-scheme-gray-1;
+
+        }
+
+        .icon-list-1 {
+
+          transform: rotate(90deg);
+
+          color: $color-orange-a;
+
+        }
+
+      }
+
+      .sub-list-1 {
+
+        display: block;
+
+      }
+
+    }
+
+    &.selected{
+
+      .block-1 {
+
+        &:after {
+          flex: 0 0 1px;
+          content: '';
+          width: 1px;
+          background-color: #fff;
+        }
+
+        .link-1 {
+
+          background-color: #fff;
+          border-top: 1px solid $nav-theme-1-color-gray-a;
+          border-bottom: 1px solid $nav-theme-1-color-gray-a;
+
+          cursor: default;
+
+          .bullet-1 {
+
+            background: $color-orange-a;
+          }
+
+          .info-1 {
+
+            font-weight: bold;
+            color: $color-orange-a;
+
+          }
+
         }
 
       }
 
     }
 
-  }
+    &:not(.selected):not(.active):hover {
 
-  .sub-item {
+      .link-1 {
 
-      display: flex;
-      flex: 0 0 100%;
+        background-color: $nav-theme-1-color-scheme-blue-1;
+
+        border-top: 1px solid $nav-theme-1-color-scheme-blue-1;
+        border-bottom: 1px solid $nav-theme-1-color-scheme-blue-1;
+
+        .bullet-1 {
+
+          background-color: $nav-theme-1-color-scheme-blue-2;
+
+        }
+
+        .info-1 {
+
+          color: $nav-theme-1-color-scheme-blue-2;
+
+        }
+
+        .icon-list-1 {
+          
+          // color: $nav-theme-1-color-scheme-blue-2;
+
+        }
+
+      }
+
+    }
+
+    .sub-list-1 {
+
+      @include flex-default-container();
+      @include reset-style-list();
       
-    .sub-navigation {
+      border-top: 1px solid $color-gray-d;
+      border-bottom: 1px solid $color-gray-d;
+      background-color: #fff;
 
-      display: flex;
-      flex: 0 0 100%;
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      list-style-type: none;
-      
-      >.item {
+      display: none;
 
-        display: flex;
-        flex: 0 0 100%;
-        flex-wrap: wrap;
-        font-size: 0.8rem;
+      .item-2 {
 
-        transition: all 0.15s ease-out;
+        @include flex-default-container();
 
-        .block{
+        .block-2 {
 
-          display: flex;
-          flex: 0 0 100%;
+          @include flex-default-container();
 
-          .link {
+        }
 
-            display: flex;
-            flex: 0 0 100%;
-            align-items: center;
-            padding: 8px 14px 8px 40px;
+        .link-2 {
 
-            color: $nav-theme-2-color-d;
+          @include flex-default-container();
+          align-items: center;
 
-            cursor: pointer;
+          padding: 8px 10px 8px 36px;
 
-            text-decoration: none;
+          font-size: 0.8rem;
+          text-decoration: none;
 
-            background-color: #fff;
+          transition: all 0.5s ease-out;
+
+          .icon-2 {
+
+            color: $nav-theme-1-color-scheme-gray-2;
+            margin-right: 5px;
+
+            transition: all 0.5s ease-out;
 
           }
 
-          .info {
+          .info-2 {
+            
+            color: $nav-theme-1-color-scheme-gray-1;
+            
+            transition: all 0.5s ease-out;
 
-            margin-left: 5px;
+          }
+
+        }
+
+        &:not(.selected):not(.active):hover {
+          
+          .link-2 {
+
+            background-color: $nav-theme-1-color-scheme-blue-1;
+
+            .icon-2 {
+
+              color: $nav-theme-1-color-scheme-blue-2;
+
+            }
+
+            .info-2 {
+
+              color: $nav-theme-1-color-scheme-blue-2;
+
+            }
+
           }
 
         }
@@ -253,67 +294,85 @@ $background-color-scheme-b: $nav-theme-2-color-e;
 }
 
 @media screen and (min-width: $view-1-min-width) and (max-width: $view-1-max-width) {
+  
+  .nav-theme-2 {
 
-  .nav-theme-2{
+    :not(.active).item-1 {
+    
+      .block-1 {
 
-    .main-navigation {
+        .link-1 {
 
-      .item {
+          flex-wrap: wrap;
+          justify-content: center;
 
-        .block{
+          .bullet-1 {
+
+            margin: 0;
+
+          }
+
+          .info-1 {
+
+            display: none;
+
+          }
+
+          .icon-list-1 {
+
+            margin-top: -3px;
+            transform: rotate(-90deg);
+            font-size: 0.7rem;
+
+          }
+
+        }
+
+      }
+
+      .sub-list-1 {
         
-          .link {
+        display: none !important;
+      }
 
-            flex-wrap: wrap;
-            justify-content: center;
+    }
 
-            padding: 10px;
+    .item-1 {
+    
+      .block-1 {
 
-            .info{
-              display: none;
-            }
+        .link-1 {
 
-            [class*=chevron] {
-              
-              margin-top: -3px;
-              transform: rotate(-90deg);
-              font-size: 0.7rem;
+          flex-wrap: wrap;
+          justify-content: center;
 
-            }
+          .bullet-1 {
+
+            margin: 0;
+
+          }
+
+          .info-1 {
+
+            display: none;
+
+          }
+
+          .icon-list-1 {
+
+            margin-top: -3px;
+            transform: rotate(90deg);
+            font-size: 0.7rem;
 
           }
 
         }
 
-        &.active {
+      }
 
-          .block{
-
-            .link {
-              
-              cursor: default;
-
-              .bullet {
-                
-                .icon {
-
-                }
-
-              }
-
-              [class*=chevron] {
-                  
-                transform: rotate(90deg);
-
-                color: $color-orange-a;
-
-              }
-
-            }
-          }
-
-        }
-
+      .sub-list-1 {
+        
+        display: none !important;
       }
 
     }

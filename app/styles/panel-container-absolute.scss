@@ -10,6 +10,7 @@ $icon-font-path: '../fonts/';
 
 // Mixins para montagem de styles
 @import "mixins/_blocks.scss";
+@import "mixins/_resets.scss";
 
 // Themes para montagem dos layouts
 @import "themes/_structure-absolute.scss";

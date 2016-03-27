@@ -28,3 +28,10 @@
     right: $right;
 
 }
+
+@mixin flex-default-container() {
+
+    display: flex;
+    flex: 0 0 100%;
+
+}

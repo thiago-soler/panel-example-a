@@ -1,86 +1,73 @@
-$nav-theme-1-color-a: $color-gray-a;
-$nav-theme-1-color-b: $nav-color-hover-a;
-$nav-theme-1-color-c: $color-blue-a;
-$nav-theme-1-color-d: $color-gray-b;
-$nav-theme-1-color-e: $color-gray-c;
+$nav-theme-1-color-gray-a: $color-gray-a;
+$nav-theme-1-color-gray-b: $color-gray-b;
+$nav-theme-1-color-gray-c: $color-gray-c;
 
-.nav-theme-1{
+$nav-theme-1-color-blue-a: $color-blue-a;
+$nav-theme-1-color-blue-b: $color-blue-b;
 
-  .main-navigation {
+$nav-theme-1-color-scheme-blue-1: $color-scheme-blue-1;
 
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    list-style-type: none;
+$nav-theme-1-color-scheme-gray-1: $color-scheme-gray-1;
+$nav-theme-1-color-scheme-gray-2: $color-scheme-gray-2;
+
+.nav-theme-1 {
+
+  @include flex-default-container();
+  @include reset-style-list();
+
+  flex-wrap: wrap;
   
-    .item {
+  // Define os blocos principais de divisao do menu
+  .item-1 {
 
-      display: flex;
-      flex: 0 0 100%;
+    @include flex-default-container();
+
+    .block-1 {
+
+      @include flex-default-container();
+
+    }
+
+    // Cria os estilos referente ao menu
+    .link-1 {
+
+      @include flex-default-container();
+      padding: 10px;
+      border-bottom: 1px solid $nav-theme-1-color-gray-a;
+
       font-size: 0.9rem;
-      
-      border-bottom: 1px solid $nav-theme-1-color-a;
+      text-decoration: none;
 
       transition: all 0.3s ease-out;
 
-      .link {
+      .icon-1 {
 
-        display: flex;
-        flex: 0 0 100%;
-        padding: 10px;
-
-        text-decoration: none;
-
-
-        .icon{
-          
-          color: $nav-theme-1-color-e;
-          align-self: center;
-          transition: all 0.5s ease-out;
-          
-        }
-
-        .info{
-          
-          color: $nav-theme-1-color-d;
-          align-self: center;
-          margin-left: 3px;
-
-        }
+        color: $nav-theme-1-color-scheme-gray-2;
+        align-self: center;
+        transition: all 0.5s ease-out;
 
       }
 
-      &:not(.selected):hover {
-
-        background: $nav-theme-1-color-b;
-
-        .icon{
-          color: $nav-theme-1-color-c;
-        }
+      .info-1 {
+          
+        color: $nav-theme-1-color-scheme-gray-1;
+        align-self: center;
+        margin-left: 3px;
 
       }
 
-      &.selected{
+    }
+    
+    // Comportamentos de hover para elementos nao selecionados
+    &:not(.selected):hover {
 
-        background: #fff;
-        
-        &:after {
-          flex: 0 0 1px;
-          content: '';
-          width: 1px;
-          background: #fff;
-        }
+      .link-1 {
 
-        .link {
-          cursor: default;
+        background: $nav-theme-1-color-scheme-blue-1;
 
-          .icon{
-            
-            color: $nav-theme-1-color-d;
+        .icon-1 {
 
-          }
+          color: $nav-theme-1-color-blue-a;
 
         }
 
@@ -88,31 +75,42 @@ $nav-theme-1-color-e: $color-gray-c;
 
     }
 
+    &.selected {
+
+      .link-1 {
+
+        background: #fff;
+
+        cursor: default;
+
+        .icon-1 {
+
+          color: $nav-theme-1-color-gray-b;
+
+        }
+
+      }
+      
+      &:after {
+        flex: 0 0 1px;
+        content: '';
+        width: 1px;
+        background: #fff;
+      }
+
+    }
 
   }
 
 }
 
 @media screen and (min-width: $view-1-min-width) and (max-width: $view-1-max-width) {
+  
+  .nav-theme-1 {
+    
+    .info-1 {
 
-  .nav-theme-1{
-
-    .main-navigation {
-
-      .item {
-        
-        .link {
-
-          align-items: center;
-          justify-content: center;
-
-          .info{
-            display: none;
-          }
-
-        }
-
-      }
+      display: none !important;
 
     }
 
