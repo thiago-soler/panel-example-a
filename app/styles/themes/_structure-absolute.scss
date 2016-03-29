@@ -10,6 +10,12 @@ html {
   min-height: 0;
 }
 
+.showStructure {
+  background: #eee;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+
 .panel-section {
   
   @include absolute-blocks(null);
@@ -76,3 +82,11 @@ html {
 // Media queries
 @import "media_queries/_structure-absolute-view-1.scss";
 @import "media_queries/_structure-absolute-view-2.scss";
+
+
+article h3{
+
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+
+}
